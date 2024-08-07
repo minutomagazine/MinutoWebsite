@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta
+      name="description"
+      content="Минуто е списание за млади создадено во 2022 година во Северна Македонија од страна на тројца амбициозни средношколци: Симон Михајловиќ, Андреј Костовски и Марин Пенџерковски. Минуто обработува теми од областа на музиката, уметноста, здравјето, спортот, културата, и секако модата. Во 2024 година Минуто е многу профитабилен двомесечник, се издава исклучиво на англиски јазик, а се продава во преку 150 трафики и супер маркети низ цела Северна Македонија."
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <link rel="icon" href="MinutoLogoShort.png" />
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+
+    <link rel="stylesheet" href="https://use.typekit.net/kwg1xkg.css" />
+
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+
+    <script defer src="script.js"></script>
+
+    <title>Minuto &mdash; The First Macedonian Magazine in English</title>
+  </head>
+  <body>
+    <header class="sticky header nav-open">
+      <a href="#">
+        <img
+          class="logo"
+          alt="Minuto Logo"
+          src="MinutoLogoTransparentBlackLarge.png"
+        />
+      </a>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#">ABOUS US</a></li>
+          <li><a class="main-nav-link" href="#gallery">GALLERY</a></li>
+          <li><a class="main-nav-link" href="#contact">CONTACT</a></li>
+          <li><a class="main-nav-link contact" href="#shop">SHOP</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+      <section class="section-hero">
+        <div class="overlay">
+          <div class="hero">
+            <div class="hero-text-box">
+              <h1 class="heading-primary">
+                So you want to <br />
+                stay unique and <br />
+                live with style?
+              </h1>
+              <p class="hero-description">
+                <span> You sure can, with the power of Minuto. </span>
+                <br />
+                Minuto is a luxury magazine for young people that focuses on the
+                trendiest topics worldwide and the implementation of the same in
+                North Macedonia.
+              </p>
+
+              <a href="#cta" class="btn btn--full margin-right-sm"
+                >Buy the newest Minuto!</a
+              >
+              <!-- 
+            <div class="client-ads">
+              <div class="client-imgs">
+                <img src="AlkaloidLogo.png" alt="Customer photo" class="alkaloid" />
+                <img src="A1Logo.png" alt="Customer photo" class="A1" />
+                <img src="MakpetrolLogo.png" alt="Customer photo" class="makpetrol" />
+                <img src="ReuzelLogo.jpg" alt="Customer photo" class="reuzel" />
+                <img src="Chapter03Logo.jpg" alt="Customer photo" class="chapter03"/>
+              </div>
+              <p class="client-text">
+                <span>10+</span> national companies that support Minuto!
+              </p>
+            </div>
+          
+          </div>
+          <div class="hero-img-box">
+            <img src="Hero-img.png" class="hero-img" alt="Minuto Magazine" />
+          </div>
+      -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--
+      <div class="map-question">
+        <h3 class="heading-tertiary map-question-text">
+          Where do I buy a Minuto myself?
+        </h3>
+      </div>
+    -->
+
+    <section class="sponsored">
+      <div class="container">
+        <h2 class="heading-sponsored">Sponsored By</h2>
+        <div class="logos">
+          <img src="A1Logo.png" alt="A1 logo">
+          <img src="AlkaloidLogo.png" alt="Alkaloid logo">
+          <img src="AllElectricLogo.png" alt="AllElectric logo">
+          <img src="ReuzelLogo.jpg" alt="Reuzel Logo">
+          <img src="MakpetrolLogo.png" alt="Makpetrol logo">
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="blog-section">
+      <div class="container">
+          <h2 class="section-title">Featured in the current issue of Minuto is:</h2>
+          <div class="blog-posts-wrapper">
+              <div class="blog-posts" id="blog-posts">
+                  <!-- Blog posts will be inserted here -->
+              </div>
+          </div>
+          <p class="note">*Minuto is not a supporter of any type of digital mediums. To read the whole stories, buy Minuto's physical issue online or in a physical marketplace.</p>
+      </div>
+  </section>
+
+  <script>
+      const sheetID = '1ijZS3XQbaMt05_o_ZU0Yuc_8nOaQHL1ABa7uK5VdRIQ';
+      const sheetName = 'Sheet1'; // Adjust if your sheet name is different
+      const apiKey = 'AIzaSyBBZnp_WL3uZCl50QPmcfBtDk4FYPEkir0'; // Obtain from Google Cloud Console
+
+      async function fetchBlogPosts() {
+          const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${sheetName}?key=${apiKey}`;
+          const response = await fetch(url);
+          const data = await response.json();
+          const rows = data.values;
+
+          const blogContainer = document.getElementById('blog-posts');
+          blogContainer.innerHTML = ''; // Clear existing content
+
+          rows.slice(1).forEach(row => {
+              const [title, imageUrl, excerpt] = row;
+              const blogPost = `
+                  <article class="blog-post">
+                      <img src="${imageUrl}" alt="${title}">
+                      <div class="post-content">
+                          <h3 class="post-title">${title}</h3>
+                          <p class="post-excerpt">${excerpt}</p>
+                      </div>
+                  </article>
+              `;
+              blogContainer.innerHTML += blogPost;
+          });
+      }
+
+      document.addEventListener('DOMContentLoaded', fetchBlogPosts);
+  </script>
+  
+
+    <main>
+      <div class="map">
+        <h2 class="section-title">A map of all the places where you can buy a Minuto yourself:</h2>
+        <div style="width: 100%; height: 50rem; overflow: hidden">
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=1bpCQ_E37ckb8SqxkBbIIaLlZZbgNV5Q&ehbc=2E312F"
+            style="
+              border: 0;
+              position: relative;
+              top: -115%;
+              left: -105%;
+              width: 300%;
+              height: 300%;
+            "
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+        <p class="note" style="padding-top: 10px;">*Not all of the above-mentioned marketplaces may include the newest issue of Minuto.</p>
+      </div>
+
+<!--
+      <section class="new-issue" id="new">
+        <div class="container">
+          <span class="subheading">Featuring Gabriel Gbadamosi</span>
+          <h2 class="heading-secondary">The 9th issue of Minuto <br> is now officialy out!</h2>
+        </div>
+          <div class="container grid grid--2-cols grid--center-v">
+            <div class="step-text-box">
+              <p class="step-description">
+                Dive into the world of Minuto’s latest 9th issue! Discover @gabrielgbadamosi_ insights on studying abroad in the Czech Republic - a fresh perspective for many in Macedonia!  Grab your copy for only 100 denars—less than the cost of your morning coffee! Available in over 300 kiosks and supermarkets. Big thanks to our sponsors: MaratonGroup @alkaloidskopje @rkalkaloid @a1makedonija @a1svetmk @allelectric.mk @voltcards.co and @chapter.03_ Special shoutout to @victorialoba shining on our back cover!
+              </p>
+            </div>
+            <div class="step-img-box">
+              <img src="FirstPageJune-July2024.jpg" class="step-img" alt="Minuto 9th cover." />
+            </div>
+        </div>
+      </section>
+    -->
+
+      <section class="section-cta" id="contact">
+        <div class="container">
+          <div class="cta">
+            <div class="cta-text-box">
+              <h2 class="heading-secondary">Contact</h2>
+              <p class="cta-text">Apply for your advertisment space in Minuto today!</p>
+
+              <form class="cta-form" name="sign-up" onsubmit="handleSubmit(event)">
+                <div>
+                  <label for="fullName">Full Name</label>
+                  <input
+                    id="fullName"
+                    type="text"
+                    placeholder="Simon Mihajlovic"
+                    name="fullName"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="email">E-mail Address</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="simonmihajlovic@primer.com"
+                    name="email"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="source">From where did you find about us?</label>
+                  <select id="source" name="source" required>
+                    <option value="">
+                      Please choose only one option
+                    </option>
+                    <option value="friends">Friends and Family</option>
+                    <option value="youtubeorinstagram">Social media</option>
+                    <option value="kisoksorsupermarkets">
+                      Kisoks or Supermarkets
+                    </option>
+                    <option value="bus-advertisements">Advertisment on Buses or Bus-stops</option>
+                    <option value="others">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="adSpace"
+                    >What is your advertising space of choice?</label
+                  >
+                  <select id="adSpace" name="adSpace">
+                    <option value="">
+                      Please choose only one option
+                    </option>
+                    <option value="driver">Cover</option>
+                    <option value="side">Back-Cover</option>
+                    <option value="back">An Inside Page</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn--form">Register now.</button>
+              </form>
+            </div>
+            <div
+              class="cta-img-box"
+              role="img"
+              aria-label="A girl reading a Minuto magazine."
+            ></div>
+          </div>
+        </div>
+
+        <script>
+          async function handleSubmit(event) {
+              event.preventDefault();
+              const formData = new FormData(event.target);
+              const data = {};
+              formData.forEach((value, key) => {
+                  data[key] = value;
+              });
+              const response = await fetch('/submit', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify(data)
+              });
+              if (response.ok) {
+                  alert('Form submitted successfully!');
+              } else {
+                  alert('There was a problem with the form submission.');
+              }
+          }
+      </script>
+
+      </section>
+    </main>
+
+      <footer class="footer">
+        <div class="container grid-1 grid--footer">
+          <div class="logo-col">
+            <a href="#" class="footer-logo">
+              <img class="logo-footer" alt="Minuto logo" src="MinutoLogoTransparentBlackLarge.png" />
+            </a>
+  
+            <ul class="social-links">
+              <li>
+                <a class="footer-link" href="https://www.instagram.com/minuto.mk/"
+                  ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+                ></a>
+              </li>
+              <!--
+              <li>
+                <a class="footer-link" href="#"
+                  ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+                ></a>
+              </li>
+            
+              <li>
+                <a class="footer-link" href="#"
+                  ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+                ></a>
+              </li>
+            -->
+            </ul>
+  
+            <p class="copyright">
+              Copyright &copy; <span class="year">2024</span> by Minuto DOOEL - Skopje, Inc.
+            </p>
+            <p class="copyright-1">
+              All rights reserved.
+            </p>
+          </div>
+  
+          <div class="address-col">
+            <p class="footer-heading">Contact Us</p>
+            <address class="contacts">
+              <p>
+                Улица Св. Кирил и Методиј бр.24
+              </p>
+              <p>
+                Центар, Скопје
+                </p>
+              <p class="address"> 
+                1000 Скопје - Македонија 
+                </p>
+              <p>
+                <a class="footer-link" href="tel: 389 70 343 825">389 70 343 825</a
+                ><br />
+                <a class="footer-link" href="tel: 389 78 220 062">389 78 220 062</a
+                  ><br />
+                <a class="footer-link" href="mailto: info@minuto.mk"
+                  >info@minuto.mk</a
+                >
+              </p>
+            </address>
+          </div>
+        </footer> 
+  </body>
+</html>

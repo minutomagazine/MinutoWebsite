@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta
+      name="description"
+      content="Минуто е списание за млади создадено во 2022 година во Северна Македонија од страна на тројца амбициозни средношколци: Симон Михајловиќ, Андреј Костовски и Марин Пенџерковски. Минуто обработува теми од областа на музиката, уметноста, здравјето, спортот, културата, и секако модата. Во 2024 година Минуто е многу профитабилен двомесечник, се издава исклучиво на англиски јазик, а се продава во преку 150 трафики и супер маркети низ цела Северна Македонија."
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <link rel="icon" href="MinutoLogoShort.png" />
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+
+    <link rel="stylesheet" href="https://use.typekit.net/kwg1xkg.css" />
+
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+
+    <script defer src="script.js"></script>
+
+    <title>Minuto &mdash; The First Macedonian Magazine in English</title>
+  </head>
+  <body>
+    <header class="sticky header nav-open">
+      <a href="#">
+        <img
+          class="logo"
+          alt="Minuto Logo"
+          src="MinutoLogoTransparentBlackLarge.png"
+        />
+      </a>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#">ABOUS US</a></li>
+          <li><a class="main-nav-link" href="#gallery">GALLERY</a></li>
+          <li><a class="main-nav-link" href="#contact">CONTACT</a></li>
+          <li><a class="main-nav-link contact" href="#shop">SHOP</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <style>
+      /* Basic styling for the shop */
+      .shop-title {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .product {
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        width: 300px;
+        margin: 10px;
+        text-align: center;
+      }
+
+      .product img {
+        width: 100%;
+        height: auto;
+      }
+
+      .product-title {
+        font-size: 20px;
+        margin: 10px 0;
+        color: #333;
+      }
+
+      .product-price {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #666;
+      }
+
+      .add-to-cart {
+        background-color: #1a73e8;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 20px 0;
+      }
+
+      .cart {
+        margin: 20px 0;
+        text-align: right;
+      }
+
+      .cart-button {
+        background-color: #1a73e8;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .checkout-form {
+        display: none;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      .checkout-form input,
+      .checkout-form button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      .checkout-form button {
+        background-color: #1a73e8;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+    
+    <div class="header" id="shop">
+      <h1>Minuto Shop</h1>
+    </div>
+
+    <div class="container">
+      <h2 class="shop-title">Buy Minuto Magazines</h2>
+
+      <div class="products">
+        <div class="product" data-id="1">
+          <img src="magazine-cover-1.jpg" alt="Magazine Cover 1" />
+          <h3 class="product-title">Minuto Issue 1</h3>
+          <p class="product-price">$10.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product" data-id="2">
+          <img src="magazine-cover-2.jpg" alt="Magazine Cover 2" />
+          <h3 class="product-title">Minuto Issue 2</h3>
+          <p class="product-price">$10.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Add more products as needed -->
+      </div>
+
+      <div class="cart">
+        <button class="cart-button">Checkout</button>
+      </div>
+
+      <div class="checkout-form" id="checkout-form">
+        <h3>Checkout</h3>
+        <input type="text" id="customer-name" placeholder="Name" />
+        <input type="email" id="customer-email" placeholder="Email" />
+        <input type="text" id="customer-address" placeholder="Address" />
+        <button id="pay-button">Pay Now</button>
+      </div>
+    </div>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+      // Your Stripe public key
+      const stripe = Stripe("YOUR_STRIPE_PUBLIC_KEY");
+
+      // Sample cart data
+      let cart = [];
+
+      document.querySelectorAll(".add-to-cart").forEach((button) => {
+        button.addEventListener("click", (event) => {
+          const product = event.target.closest(".product");
+          const productId = product.getAttribute("data-id");
+          const productTitle =
+            product.querySelector(".product-title").textContent;
+          const productPrice = product
+            .querySelector(".product-price")
+            .textContent.replace("$", "");
+
+          const cartItem = {
+            id: productId,
+            title: productTitle,
+            price: parseFloat(productPrice),
+            quantity: 1,
+          };
+
+          cart.push(cartItem);
+          alert(`${productTitle} has been added to the cart`);
+        });
+      });
+
+      document.querySelector(".cart-button").addEventListener("click", () => {
+        document.getElementById("checkout-form").style.display = "block";
+      });
+
+      document
+        .getElementById("pay-button")
+        .addEventListener("click", async () => {
+          const name = document.getElementById("customer-name").value;
+          const email = document.getElementById("customer-email").value;
+          const address = document.getElementById("customer-address").value;
+
+          if (!name || !email || !address) {
+            alert("Please fill in all fields");
+            return;
+          }
+
+          // Create a Checkout Session
+          const response = await fetch("/create-checkout-session", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ cart, name, email, address }),
+          });
+
+          const session = await response.json();
+          await stripe.redirectToCheckout({ sessionId: session.id });
+        });
+    </script>
+
+      <footer class="footer">
+        <div class="container grid-1 grid--footer">
+          <div class="logo-col">
+            <a href="#" class="footer-logo">
+              <img class="logo-footer" alt="Minuto logo" src="MinutoLogoTransparentBlackLarge.png" />
+            </a>
+  
+            <ul class="social-links">
+              <li>
+                <a class="footer-link" href="https://www.instagram.com/minuto.mk/"
+                  ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+                ></a>
+              </li>
+              <!--
+              <li>
+                <a class="footer-link" href="#"
+                  ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+                ></a>
+              </li>
+            
+              <li>
+                <a class="footer-link" href="#"
+                  ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+                ></a>
+              </li>
+            -->
+            </ul>
+  
+            <p class="copyright">
+              Copyright &copy; <span class="year">2024</span> by Minuto DOOEL - Skopje, Inc.
+            </p>
+            <p class="copyright-1">
+              All rights reserved.
+            </p>
+          </div>
+  
+          <div class="address-col">
+            <p class="footer-heading">Contact Us</p>
+            <address class="contacts">
+              <p>
+                Улица Св. Кирил и Методиј бр.24
+              </p>
+              <p>
+                Центар, Скопје
+                </p>
+              <p class="address"> 
+                1000 Скопје - Македонија 
+                </p>
+              <p>
+                <a class="footer-link" href="tel: 389 70 343 825">389 70 343 825</a
+                ><br />
+                <a class="footer-link" href="tel: 389 78 220 062">389 78 220 062</a
+                  ><br />
+                <a class="footer-link" href="mailto: info@minuto.mk"
+                  >info@minuto.mk</a
+                >
+              </p>
+            </address>
+          </div>
+        </footer> 
+  </body>
+</html>
