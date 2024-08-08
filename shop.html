@@ -34,12 +34,13 @@
     <link rel="stylesheet" href="queries.css" />
 
     <script defer src="script.js"></script>
+    <script defer src="translation.js"></script>
 
     <title>Minuto &mdash; The First Macedonian Magazine in English</title>
   </head>
   <body>
     <header class="sticky header nav-open">
-      <a href="#">
+      <a href="index.html">
         <img
           class="logo"
           alt="Minuto Logo"
@@ -49,12 +50,40 @@
 
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">ABOUS US</a></li>
-          <li><a class="main-nav-link" href="#gallery">GALLERY</a></li>
-          <li><a class="main-nav-link" href="#contact">CONTACT</a></li>
-          <li><a class="main-nav-link contact" href="#shop">SHOP</a></li>
+          <li>
+            <select
+              class="main-nav-link translation"
+              id="languageSwitcher"
+              onchange="switchLanguage()"
+            >
+              <option value="en" data-translate="english">ENGLISH</option>
+              <option value="mk" data-translate="macedonian">MACEDONIAN</option>
+            </select>
+          </li>
+          <li>
+            <a class="main-nav-link" href="index.html" data-translate="aboutus"
+              >ABOUS US</a
+            >
+          </li>
+          <li>
+            <a class="main-nav-link" href="index.html#map" data-translate="map">MAP</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="index.html#contact" data-translate="contact"
+              >CONTACT</a
+            >
+          </li>
+          <li>
+            <a
+              class="main-nav-link contact"
+              href="shop.html"
+              data-translate="shop"
+              >SHOP</a
+            >
+          </li>
         </ul>
       </nav>
+
 
       <button class="btn-mobile-nav">
         <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
@@ -150,14 +179,9 @@
         cursor: pointer;
       }
     </style>
-    
-    <div class="header" id="shop">
-      <h1>Minuto Shop</h1>
-    </div>
-
+  
+<!--
     <div class="container">
-      <h2 class="shop-title">Buy Minuto Magazines</h2>
-
       <div class="products">
         <div class="product" data-id="1">
           <img src="magazine-cover-1.jpg" alt="Magazine Cover 1" />
@@ -171,7 +195,7 @@
           <p class="product-price">$10.00</p>
           <button class="add-to-cart">Add to Cart</button>
         </div>
-        <!-- Add more products as needed -->
+        /Add more products as needed/
       </div>
 
       <div class="cart">
@@ -246,6 +270,7 @@
           await stripe.redirectToCheckout({ sessionId: session.id });
         });
     </script>
+    -->
 
       <footer class="footer">
         <div class="container grid-1 grid--footer">
@@ -284,22 +309,20 @@
           </div>
   
           <div class="address-col">
-            <p class="footer-heading">Contact Us</p>
+            <p class="footer-heading" data-translate="contact3">Contact Us</p>
             <address class="contacts">
-              <p>
-                Улица Св. Кирил и Методиј бр.24
+              <p data-translate="a1">Street Sv. Kiril i Metodij No.24</p>
+              <p data-translate="a2">Center, Skopje</p>
+              <p class="address" data-translate="a3">
+                1000 Skopje - North Macedonia
               </p>
               <p>
-                Центар, Скопје
-                </p>
-              <p class="address"> 
-                1000 Скопје - Македонија 
-                </p>
-              <p>
-                <a class="footer-link" href="tel: 389 70 343 825">389 70 343 825</a
+                <a class="footer-link" href="tel: 389 70 343 825"
+                  >389 70 343 825</a
                 ><br />
-                <a class="footer-link" href="tel: 389 78 220 062">389 78 220 062</a
-                  ><br />
+                <a class="footer-link" href="tel: 389 78 220 062"
+                  >389 78 220 062</a
+                ><br />
                 <a class="footer-link" href="mailto: info@minuto.mk"
                   >info@minuto.mk</a
                 >
