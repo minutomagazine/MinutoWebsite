@@ -116,12 +116,16 @@
     display: block;
   }
 
+  .cta-text-box {
+    margin: 0 -5%;
+  }
+
   .hero-img {
     width: 0;
   }
 
   .heading-primary {
-    font-size: 5.2rem;
+    font-size: 4.8rem;
   }
 
   .grid--4-cols-1 {
