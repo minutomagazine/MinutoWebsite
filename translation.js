@@ -34,7 +34,7 @@ const translations = {
     note2:
       "*Not all of the above-mentioned marketplaces may include the newest issue of Minuto.",
     contact2: "Contact",
-    ctatext: "Apply for your advertisment space in Minuto today!",
+    ctatext: "Apply for your own advertisment space in Minuto today!",
     name: "Full Name",
     email: "E-mail Address",
     source: "From where did you find about Minuto?",
@@ -53,6 +53,8 @@ const translations = {
     a1: "Street Sv. Kiril i Metodij No.24",
     a2: "Center, Skopje",
     a3: "1000 Skopje - North Macedonia",
+    minutopdf:
+      "Check out the first ever issue of Minuto \n (release date: 15th of September 2022)",
   },
   mk: {
     aboutus: "ЗА НАС",
@@ -60,9 +62,9 @@ const translations = {
     contact: "КОНТАКТ",
     shop: "ПРОДАВНИЦА",
     title: "Минуто - Првото македонско списание на Англиски јазик",
-    english: "АНГЛИСКИ",
+    english: "\u00A0\u00A0 АНГЛИСКИ",
     macedonian: "МАКЕДОНСКИ",
-    heading: "Сакаш да останеш \n уникатен и да живееш \n со стил?",
+    heading: "Сакаш да \n останеш уникатен \n и да живееш \n со стил?",
     description: "Секако дека можеш, со моќта на Минуто.",
     description2:
       "Минуто е луксузно списание за млади кое се фокусира на најпознатите светски трендови и нивната имплементација во Северна Македонија.",
@@ -74,7 +76,7 @@ const translations = {
     note2:
       "*Не сите од горе-наведените продажни места може да го содржат најновото издание на Минуто.",
     contact2: "Контакт",
-    ctatext: "Аплицирајте за Вашиот рекламен простор во минуто денес!",
+    ctatext: "Аплицирајте за Вашиот рекламен простор во Минуто денес!",
     name: "Целосно Име",
     email: "Е-мејл Адреса",
     source: "Од каде дознавте за Минуто?",
@@ -93,6 +95,8 @@ const translations = {
     a1: "Улица Св. Кирил и Методиј Бр.24",
     a2: "Центар, Скопје",
     a3: "1000 Скопје - Северна Македонија",
+    minutopdf:
+      "Разгледајте го првото издание на Минуто \n (издадено на 15ти Септември 2022)",
   },
 };
 
