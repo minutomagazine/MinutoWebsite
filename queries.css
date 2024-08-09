@@ -73,7 +73,7 @@
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: all 0.5s;
+    transition: all 1s;
     pointer-events: none;
     visibility: hidden;
   }
@@ -112,6 +112,14 @@
 
   .viewpdf {
     font-size: 1.8rem;
+  }
+
+  .pdf1 {
+    font-size: 4rem;
+  }
+
+  .pdf2 {
+    font-size: 2rem;
   }
 }
 

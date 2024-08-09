@@ -44,7 +44,7 @@ const translations = {
     kiosks: "Kisoks or Supermarkets",
     bus: "Advertisment on Buses or Bus-stops",
     others: "Others",
-    adspace: "Preferred advertisement space?",
+    adspace: "What is your preferred advertisement space?",
     cover: "Cover",
     backcover: "Back-Cover",
     insidepage: "An Inside-Page",
@@ -53,8 +53,8 @@ const translations = {
     a1: "Street Sv. Kiril i Metodij No.24",
     a2: "Center, Skopje",
     a3: "1000 Skopje - North Macedonia",
-    minutopdf:
-      "Check out the first ever issue of Minuto \n (release date: 15th of September 2022)",
+    minutopdf1: "Check out the first ever issue of Minuto!",
+    minutopdf2: "(release date: 15th of September 2022)",
   },
   mk: {
     aboutus: "ЗА НАС",
@@ -95,8 +95,8 @@ const translations = {
     a1: "Улица Св. Кирил и Методиј Бр.24",
     a2: "Центар, Скопје",
     a3: "1000 Скопје - Северна Македонија",
-    minutopdf:
-      "Разгледајте го првото издание на Минуто \n (издадено на 15ти Септември 2022)",
+    minutopdf1: "Разгледајте го првото издание на Минуто!",
+    minutopdf2: "(издадено на 15ти Септември 2022)",
   },
 };
 
