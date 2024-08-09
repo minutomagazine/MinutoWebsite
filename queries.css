@@ -105,6 +105,10 @@
   .cta {
     grid-template-columns: 3fr 0fr;
   }
+
+  .section-title {
+    font-size: 4rem;
+  }
 }
 
 /**************************/

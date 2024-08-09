@@ -173,8 +173,8 @@ body {
 
 .btn--full:hover,
 .btn--full:active {
-  background-color: #2c5c4f;
-  color: white;
+  background-color: #fff;
+  color: #111;
 }
 
 .btn--outline:link,
