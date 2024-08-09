@@ -191,6 +191,7 @@ body {
 
 .btn--form {
   color: black;
+  background-color: white;
   align-self: end;
   padding: 1.2rem;
 }
