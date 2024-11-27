@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+            name="description"
+            content="Минуто е списание за млади создадено во 2022 година во Северна Македонија од страна на тројца амбициозни средношколци: Симон Михајловиќ, Андреј Костовски и Марин Пенџерковски. Минуто обработува теми од областа на музиката, уметноста, здравјето, спортот, културата, и секако модата. Во 2024 година Минуто е многу профитабилен двомесечник, се издава исклучиво на англиски јазик, а се продава во преку 150 трафики и супер маркети низ цела Северна Македонија."
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+            nomodule=""
+            src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <link rel="icon" href="MinutoLogoShort.png" />
+    <link rel="stylesheet" href="https://use.typekit.net/kwg1xkg.css" />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <link rel="stylesheet" href="checkout.css" />
+    <link rel="stylesheet" href="thankyou.css" />
+    <link rel="stylesheet" href="failurepage.css" />
+    <script defer src="script.js"></script>
+    <script defer src="translation.js"></script>
+    <script defer src="cart.js"></script>
+    <script defer src="checkout.js"></script>
+    <script defer src="server.js"></script>
+
+
+
+    <title>Minuto &mdash; The First Macedonian Magazine in English</title>
+</head>
+<body>
+<header class="sticky header">
+    <a href="index.html">
+        <img class="logo" alt="Minuto Logo" src="MinutoLogoTransparentBlackLarge.png"/>
+    </a>
+    <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+    </button>
+    <nav class="main-nav">
+        <ul class="main-nav-list">
+            <li><select
+                        class="main-nav-link translation"
+                        id="languageSwitcher"
+                        onchange="switchLanguage()"
+                >
+                    <option value="en" data-translate="english">ENGLISH</option>
+                    <option value="mk" data-translate="macedonian">MACEDONIAN</option>
+                </select>
+            </li>
+            <li><a href="index.html" class="main-nav-link">ABOUT US</a></li>
+            <li><a href="index.html#map" class="main-nav-link">MAP</a></li>
+            <li><a href="index.html#contact" class="main-nav-link">CONTACT</a></li>
+            <li>
+                <a href="cart.html" class="main-nav-link cart">
+                    VIEW CART <span class="cart-count">0</span>
+                </a>
+            </li>
+            <li><a href="shop.html" class="main-nav-link">SHOP</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<div class="checkout-section">
+    <h1 class="checkout-heading">Checkout</h1>
+</div>
+<!-- Left: Billing Details -->
+<div class="main-container">
+    <div class="form-container">
+        <h2>Billing Details</h2>
+        <form>
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" required />
+
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" required />
+
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" required />
+
+            <label for="company-name">Company Name (optional)</label>
+            <input type="text" id="company-name" />
+
+            <label for="country">Country / Region *</label>
+            <select id="country" required>
+                <option value="">Select a country</option>
+                <option value="north-macedonia">North Macedonia</option>
+            </select>
+
+            <label for="street-address">Street Address *</label>
+            <input type="text" id="street-address" required />
+
+            <label for="city">Town / City *</label>
+            <select id="city" required>
+                <option value="">Select a city</option>
+                <option value="berovo">Berovo</option>
+                <option value="bitola">Bitola</option>
+                <option value="bogdanci">Bogdanci</option>
+                <option value="valandovo">Valandovo</option>
+                <option value="veles">Veles</option>
+                <option value="vinica">Vinica</option>
+                <option value="gevgelija">Gevgelija</option>
+                <option value="gostivar">Gosivar</option>
+                <option value="debar">Debar</option>
+                <option value="delcevo">Delcevo</option>
+                <option value="demir-kapija">Demir Kapija</option>
+                <option value="dojran">Dojran</option>
+                <option value="kavadarci">Kavadarci</option>
+                <option value="kicevo">Kicevo</option>
+                <option value="kocani">Kocani</option>
+                <option value="kratovo">Kratovo</option>
+                <option value="kriva-palanka">Kriva Palanka</option>
+                <option value="krusevo">Krusevo</option>
+                <option value="kumanovo">Kumanovo</option>
+                <option value="makedonska-kamenica">Makedonska Kamenica</option>
+                <option value="makedonski-brod">Makedonski Brod</option>
+                <option value="nov-dojran">Nov Dojran</option>
+                <option value="ohrid">Ohrid</option>
+                <option value="prilep">Prilep</option>
+                <option value="probistip">Probistip</option>
+                <option value="radovis">Radovis</option>
+                <option value="sveti-nikole">Sveti Nikole</option>
+                <option value="skopje">Skopje</option>
+                <option value="struga">Struga</option>
+                <option value="tetovo">Tetovo</option>
+                <option value="stip">Stip</option>
+            </select>
+
+            <label for="postcode">Postcode / ZIP *</label>
+            <input type="text" id="postcode" required />
+
+            <label for="phone">Phone *</label>
+            <input type="tel" id="phone" required />
+
+    </form>
+</div>
+
+
+
+    <!-- Right Container (Your Order Section) -->
+    <div class="order-container">
+        <div class="order-summary">
+            <h3>Your Order</h3>
+            <table id="order-table">
+                <tbody id="order-items">
+                <!-- Items will be dynamically inserted here -->
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="3">Subtotal</td>
+                    <td id="subtotal-price">0.00 ден</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Shipping</td>
+                    <td id="shipping-price">Free</td>
+                </tr>
+                <tr>
+                    <th colspan="3">Total</th>
+                    <th id="total-price">0.00 ден</th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+
+
+    <!-- Payment Details -->
+    <div class="payment-details">
+        <h3>Credit / Debit Card</h3>
+        <form>
+            <label for="card-number">Card number</label>
+            <input type="text" id="card-number" placeholder="1234 1234 1234 1234" />
+
+            <div class="payment-row">
+                <div>
+                    <label for="expiry-date">Expiry date</label>
+                    <input type="text" id="expiry-date" placeholder="MM / YY" />
+                </div>
+                <div>
+                    <label for="security-code">Security code</label>
+                    <input type="text" id="security-code" placeholder="CVC" />
+                </div>
+            </div>
+
+            <div class="terms">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I have read and agree to the website terms and conditions *</label>
+            </div>
+
+            <button type="submit" class="place-order">Place order</button>
+        </form>
+    </div>
+</div>
+</div>
+
+
+<footer class="footer">
+    <div class="container grid-1 grid--footer">
+        <div class="logo-col">
+            <a href="#" class="footer-logo">
+                <img
+                        class="logo-footer"
+                        alt="Minuto logo"
+                        src="MinutoLogoTransparentBlackLarge.png"
+                />
+            </a>
+
+            <ul class="social-links">
+                <li>
+                    <a class="footer-link" href="https://www.instagram.com/minuto.mk/"
+                    ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+                    ></a>
+                </li>
+                <!--
+                  <li>
+                    <a class="footer-link" href="#"
+                      ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+                    ></a>
+                  </li>
+
+                  <li>
+                    <a class="footer-link" href="#"
+                      ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+                    ></a>
+                  </li>
+                -->
+            </ul>
+
+            <p class="copyright">
+                Copyright &copy; <span class="year">2024</span> by Minuto DOOEL -
+                Skopje, Inc.
+            </p>
+            <p class="copyright-1">All rights reserved.</p>
+        </div>
+
+        <div class="address-col">
+            <p class="footer-heading" data-translate="contact3">Contact Us</p>
+            <address class="contacts">
+                <p data-translate="a1">Street Sv. Kiril i Metodij No.24</p>
+                <p data-translate="a2">Center, Skopje</p>
+                <p class="address" data-translate="a3">
+                    1000 Skopje - North Macedonia
+                </p>
+                <p>
+                    <a class="footer-link" href="tel: 389 70 343 825"
+                    >389 70 343 825</a
+                    ><br />
+                    <a class="footer-link" href="tel: 389 78 220 062"
+                    >389 78 220 062</a
+                    ><br />
+                    <a class="footer-link" href="mailto: info@minuto.mk"
+                    >info@minuto.mk</a
+                    >
+                </p>
+            </address>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+

@@ -32,9 +32,12 @@
     <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="queries.css" />
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="checkout.css" />
 
     <script defer src="script.js"></script>
     <script defer src="translation.js"></script>
+    <script defer src="checkout.js"></script>
 
     <title data-translate="title">
       Minuto &mdash; The First Macedonian Magazine in English
@@ -293,7 +296,8 @@
               <form
                 class="cta-form"
                 name="sign-up"
-                onsubmit="handleSubmit(event)"
+                action="save_form.php"
+                method="POST"
               >
                 <div>
                   <label for="fullName" data-translate="name">Full Name</label>
@@ -474,3 +478,11 @@
     </footer>
   </body>
 </html>
+
+
+<nav>
+  <ul>
+    <li><a href="/cart">Cart <span class="cart-number">3</span></a></li>
+  </ul>
+</nav>
+

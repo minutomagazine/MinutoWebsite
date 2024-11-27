@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+          name="description"
+          content="Минуто е списание за млади создадено во 2022 година во Северна Македонија од страна на тројца амбициозни средношколци: Симон Михајловиќ, Андреј Костовски и Марин Пенџерковски. Минуто обработува теми од областа на музиката, уметноста, здравјето, спортот, културата, и секако модата. Во 2024 година Минуто е многу профитабилен двомесечник, се издава исклучиво на англиски јазик, а се продава во преку 150 трафики и супер маркети низ цела Северна Македонија."
+  />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script
+          type="module"
+          src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+          nomodule=""
+          src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+  ></script>
+
+  <link rel="icon" href="MinutoLogoShort.png" />
+  <link rel="stylesheet" href="https://use.typekit.net/kwg1xkg.css" />
+  <link rel="stylesheet" href="general.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cart.css" />
+  <link rel="stylesheet" href="queries.css" />
+  <script defer src="script.js"></script>
+  <script defer src="translation.js"></script>
+  <script defer src="cart.js"></script>
+
+  <title>Minuto &mdash; The First Macedonian Magazine in English</title>
+</head>
+<body>
+<header class="sticky header">
+  <a href="index.html">
+    <img class="logo" alt="Minuto Logo" src="MinutoLogoTransparentBlackLarge.png"
+    />
+  </a>
+  <nav class="main-nav">
+    <ul class="main-nav-list">
+      <li>
+        <select
+                class="main-nav-link translation"
+                id="languageSwitcher"
+                onchange="switchLanguage()"
+        >
+          <option value="en" data-translate="english">ENGLISH</option>
+          <option value="mk" data-translate="macedonian">MACEDONIAN</option>
+        </select>
+      </li>
+      <li><a href="index.html" class="main-nav-link">ABOUT US</a></li>
+      <li><a href="index.html#map" class="main-nav-link">MAP</a></li>
+      <li><a href="index.html#contact" class="main-nav-link">CONTACT</a></li>
+      <li>
+        <a href="cart.html" class="main-nav-link cart">
+          VIEW CART <span class="cart-count">0</span>
+        </a>
+      </li>
+      <li><a href="shop.html" class="main-nav-link">SHOP</a></li>
+      <link rel="stylesheet" href="cart.css" />
+    </ul>
+  </nav>
+  <button class="btn-mobile-nav">
+    <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+    <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+  </button>
+</header>
+
+<div class="cart-section">
+  <h1 class="cart-heading">Cart</h1>
+</div>
+
+</body>
+<body>
+<div class="cart-container">
+  <div class="cart-table-wrapper">
+  <table class="cart-table">
+    <thead>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Subtotal</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td class="product-title">
+        <img src="BrainsterXMinutoBusstopTVCover.jpg" alt="Product Image">
+        <input type="text" class="title-input" value="MINUTO #009">
+      </td>
+      <td>100</td>
+      <td>
+        <input type="number" class="quantity-input" value="1" min="1">
+      </td>
+      <td>100</td>
+      <td>
+        <button class="remove-button">X</button>
+      </td>
+    </tr>
+    <tr>
+      <td class="product-title">
+        <img src="FirstPageJune-July2024.jpg" alt="Product Image">
+        <input type="text" class="title-input" value="MINUTO #008">
+      </td>
+      <td>100</td>
+      <td>
+        <input type="number" class="quantity-input" value="1" min="1">
+      </td>
+      <td>100</td>
+      <td>
+        <button class="remove-button">X</button>
+      </td>
+    </tr>
+    <tr>
+      <td class="product-title">
+        <img src="FirstPageMarch-April2024.jpg" alt="Product Image">
+        <input type="text" class="title-input" value="MINUTO #007">
+      </td>
+      <td>100</td>
+      <td>
+        <input type="number" class="quantity-input" value="1" min="1">
+      </td>
+      <td>100</td>
+      <td>
+        <button class="remove-button">X</button>
+      </td>
+    </tr>
+    <tr>
+      <td class="product-title">
+        <img src="FirstPageJanuary-February.jpg" alt="Product Image">
+        <input type="text" class="title-input" value="MINUTO #006">
+      </td>
+      <td>100</td>
+      <td>
+        <input type="number" class="quantity-input" value="1" min="1">
+      </td>
+      <td>100</td>
+      <td>
+        <button class="remove-button">X</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+
+
+  <div class="cart-summary-container">
+    <div class="cart-summary">
+      <h3>Cart Totals</h3>
+    <div class="summary-row">
+      <span>Subtotal</span>
+      <span id="subtotal">100мкд</span>
+    </div>
+    <div class="summary-row">
+      <span>Shipping</span>
+      <span id="shipping">Calculated at checkout</span>
+    </div>
+    <div class="summary-row">
+      <span>Total</span>
+      <span id="total">100мкд</span>
+    </div>
+      <button class="proceed-button" id="proceedButton">Proceed to Checkout</button>
+
+
+    </div>
+</div>
+  </div>
+</body>
+</html>
+
+
+<footer class="footer">
+  <div class="container grid-1 grid--footer">
+    <div class="logo-col">
+      <a href="#" class="footer-logo">
+        <img
+                class="logo-footer"
+                alt="Minuto logo"
+                src="MinutoLogoTransparentBlackLarge.png"
+        />
+      </a>
+
+      <ul class="social-links">
+        <li>
+          <a class="footer-link" href="https://www.instagram.com/minuto.mk/"
+          ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+          ></a>
+        </li>
+        <!--
+          <li>
+            <a class="footer-link" href="#"
+              ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+            ></a>
+          </li>
+
+          <li>
+            <a class="footer-link" href="#"
+              ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+            ></a>
+          </li>
+        -->
+      </ul>
+
+      <p class="copyright">
+        Copyright &copy; <span class="year">2024</span> by Minuto DOOEL -
+        Skopje, Inc.
+      </p>
+      <p class="copyright-1">All rights reserved.</p>
+    </div>
+
+    <div class="address-col">
+      <p class="footer-heading" data-translate="contact3">Contact Us</p>
+      <address class="contacts">
+        <p data-translate="a1">Street Sv. Kiril i Metodij No.24</p>
+        <p data-translate="a2">Center, Skopje</p>
+        <p class="address" data-translate="a3">
+          1000 Skopje - North Macedonia
+        </p>
+        <p>
+          <a class="footer-link" href="tel: 389 70 343 825"
+          >389 70 343 825</a
+          ><br />
+          <a class="footer-link" href="tel: 389 78 220 062"
+          >389 78 220 062</a
+          ><br />
+          <a class="footer-link" href="mailto: info@minuto.mk"
+          >info@minuto.mk</a
+          >
+        </p>
+      </address>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+
+
+

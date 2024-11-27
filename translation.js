@@ -55,6 +55,7 @@ const translations = {
     a3: "1000 Skopje - North Macedonia",
     minutopdf1: "Check out the first ever issue of Minuto!",
     minutopdf2: "(release date: 15th of September 2022)",
+    cart: "CART",
   },
   mk: {
     aboutus: "ЗА НАС",
@@ -97,6 +98,7 @@ const translations = {
     a3: "1000 Скопје - Северна Македонија",
     minutopdf1: "Разгледајте го првото издание на Минуто!",
     minutopdf2: "(издадено на 15ти Септември 2022)",
+    cart: "КОШНИЧКА",
   },
 };
 

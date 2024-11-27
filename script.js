@@ -57,3 +57,68 @@ function checkFlexGap() {
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
 checkFlexGap();
+
+///////////////////////////////////////////////////////////
+// Make the cart work
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+const maxItemsAllowed = 10;
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateCartCount();
+
+  document.querySelectorAll(".add-to-cart").forEach((button) => {
+    button.addEventListener("click", () => {
+      const productElement = button.closest(".product");
+      const productName =
+        productElement.querySelector(".product-title").textContent;
+      const productPrice = parseFloat(
+        productElement
+          .querySelector(".product-price")
+          .textContent.replace("ден", "")
+      );
+
+      if (getCartTotalItems() < maxItemsAllowed) {
+        addToCart(productName, productPrice);
+        saveCart();
+        updateCartCount();
+        alert("Item added to cart!"); // Basic feedback to ensure it’s working
+      } else {
+        alert(
+          `You can only add up to ${maxItemsAllowed} magazines to your cart.`
+        );
+      }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Function to update the cart count
+  function updateCartCount(count) {
+    const cartCount = document.querySelector('.cart-count');
+    if (cartCount) {
+      cartCount.textContent = count.toString().toUpperCase(); // Update count
+    } else {
+      console.error("Cart count element not found!");
+    }
+  }
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    function updateCartCount(count) {
+      const cartCount = document.querySelector('.cart-count');
+      if (cartCount) {
+        cartCount.textContent = count.toString().toUpperCase();
+      } else {
+        console.error("Cart count element not found!");
+      }
+    }
+
+// JavaScript for Mobile Navigation Toggle
+    const mobileNavButton = document.querySelector('.btn-mobile-nav');
+    const headerElement = document.querySelector('.header');
+
+    mobileNavButton.addEventListener('click', () => {
+    headerElement.classList.toggle('nav-open'); // Add or remove nav-open class
+  });
+

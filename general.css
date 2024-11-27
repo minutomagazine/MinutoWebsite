@@ -74,12 +74,95 @@ body {
   font-family: "roboto", sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #555;
+  background-color: #ffffff;
 }
 
 /**************************/
 /* GENRAL REUSABLE COMPONENTS */
 /**************************/
+@font-face {
+  font-family: 'ScotchRomanMTStd';
+  src: url('/fonts/ScotchRomanMTStd.woff2') format('woff2'),
+  url('/fonts/ScotchRomanMTStd.woff') format('woff'),
+  url('/fonts/ScotchRomanMTStd.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.products {
+  display: grid; /* Use grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Use flexbox for side-by-side alignment */
+  flex-wrap: wrap; /* Allow wrapping to the next row on smaller screens */
+  gap: 10px; /* Add space between products */
+  justify-content: space-between; /* Center-align the items */
+  margin: 50px auto; /* Center the grid container */
+  max-width: 1200px; /* Optional: Limit container width */
+  padding: 0px;
+}
+@media (max-width: 1024px) { /* Target tablets */
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column size for smaller screens */
+    padding: 20px; /* Ensure adequate spacing around items */
+    margin: 0 auto; /* Center-align the grid on the screen */
+  }
+}
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    padding: 20px; /* Add padding for breathing space */
+    justify-content: center; /* Center items inside the grid */
+  }
+  .product {
+    margin: 0 auto; /* Center-align individual containers */
+    max-width: 300px; /* Limit the container width */
+  }
+}
+
+/* Individual Product */
+.product {
+  width: 300px;
+  max-width: 100%; /* Fixed width for each product */
+  text-align: center; /* Center-align content */
+  background-color: whitesmoke; /* Background for each product */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Hover effect transitions */
+  overflow: hidden; /* Ensure content stays inside the box */
+}
+
+.product img {
+  width: 200px; /* Ensure image fills the container */
+  height: auto;
+  box-shadow: -8px 0px 15px rgba(0, 0, 0, 0.5);
+  max-height: 300px; /* Prevent images from becoming too large */
+  object-fit: cover; /* Ensure the image is cropped nicely if it's too large */
+}
+
+.product:hover {
+  transform: translateY(-5px); /* Slight upward motion */
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.product-title {
+  font-family: 'ScotchRomanMTStd', serif;
+  font-size: 18px;
+  margin: 50px 0;
+  color: #000;
+}
+
+.add-to-cart {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 50px 0;
+}
+
+.add-to-cart:hover {
+  background-color: #333;
+}
 
 .container {
   /* 1140px */
